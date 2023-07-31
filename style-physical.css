@@ -34,6 +34,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--gray30);
     font-family: 'Roboto', sans-serif;
@@ -47,12 +51,22 @@ a{
 }
 header {
     font-size: 14px;
+    width: 188px;
     color: var(--gray10);
+    /* border: 1px solid red; */
+    position:absolute;
+    top: 64px;
+    left: -232px;
+    z-index: 1;
 }
 
 header a {
     color: var(--gray10);
     text-decoration: none;
+}
+
+header li {
+    margin-bottom: 16px;
 }
 
 header a:hover {
@@ -61,12 +75,13 @@ header a:hover {
 
 nav details summary {
     font-weight: bold;
+    line-height: 24px;
 }
 
 h1 {
     font-size: 60px;
     margin: 64px 16px;
-    border: 1px solid red;
+    font-weight: 400px;
 }
 
 /* h1 + p {
@@ -91,7 +106,7 @@ h3 {
     font-weight: normal;
     width: 300px;
     padding: 20px;
-    border: 1px solid red;
+   
     box-sizing: border-box;
 }
 
@@ -109,15 +124,23 @@ blockquote span{
 blockquote span::before{
     content: '-';
 }
-
-/* .main { */
+.header {
+   
+    position: sticky;
+    top: 0;
+}
+.header-content {
+    position: relative;
+}
+.main {
+    
     /* background-image: linear-gradient(to top, rgba(255,255,255, .3), transparent), url(./imagenes/div1.png); */
    
     /* background: purple; */
-/* } */
+}
 .main-content{
     background: white;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .wrapper {
@@ -170,7 +193,7 @@ blockquote {
 
 .section-content h3 {
     counter-increment: titlelist;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
    
 }
 
@@ -180,8 +203,12 @@ blockquote {
 
 .section-content h3::after {
     content: '';
-    width: 32px;
+    width: 80px;
     height: 4px;
     background: var(--gray30);
     display: block;
+    /* display: inline-block; */
+    /* position: absolute; */
+    /* left: 0;
+    bottom: 0;  */
 }
